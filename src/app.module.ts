@@ -6,6 +6,7 @@ import { RegionModule } from './region/region.module';
 import { MedicinesModule } from './medicines/medicines.module';
 import { District } from './district/models/district.model';
 import { Region } from './region/models/region.model';
+import { MedicineTypeModule } from './medicine-type/medicine-type.module';
 
 @Module({
   imports: [
@@ -33,6 +34,8 @@ import { Region } from './region/models/region.model';
     RegionModule,
 
     MedicinesModule,
+
+    MedicineTypeModule,
   ],
   controllers: [],
   providers: [],
