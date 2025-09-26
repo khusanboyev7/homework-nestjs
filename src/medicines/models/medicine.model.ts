@@ -2,6 +2,7 @@ import {
   AllowNull,
   AutoIncrement,
   BelongsTo,
+  BelongsToMany,
   Column,
   DataType,
   ForeignKey,
@@ -10,6 +11,8 @@ import {
   Table,
 } from "sequelize-typescript";
 import { MedicineType } from "../../medicine-type/models/medicine-type.model";
+import { Pharmacies } from "../../pharmacies/models/pharmacy.model";
+import { Stock } from "../../stock/models/stock.model";
 
 interface IMedicinesCreationAttr {
   name: string;
@@ -48,4 +51,7 @@ export class Medicines extends Model<Medicines, IMedicinesCreationAttr> {
 
   @BelongsTo(() => MedicineType)
   medicineType: MedicineType;
+
+  @BelongsToMany(() => Pharmacies, () => Stock)
+  pharmaices: Pharmacies;
 }
