@@ -13,6 +13,8 @@ import { Medicines } from './medicines/models/medicine.model';
 import { Stock } from './stock/models/stock.model';
 import { Pharmacies } from './pharmacies/models/pharmacy.model';
 import { MedicineType } from './medicine-type/models/medicine-type.model';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -46,6 +48,10 @@ import { MedicineType } from './medicine-type/models/medicine-type.model';
     PharmaciesModule,
 
     StockModule,
+
+    AdminModule,
+
+    AuthModule,
   ],
   controllers: [],
   providers: [],
